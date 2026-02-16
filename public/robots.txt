@@ -1,0 +1,17 @@
+# Robots.txt for bbqcharcoalexport.com
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://bbqcharcoalexport.com/sitemap.xml
+
+# Disallow admin/private areas
+Disallow: /api/
+Disallow: /_next/
+Disallow: /signin
+Disallow: /signup
+Disallow: /reset-password
+
+# Crawl-delay (optional)
+Crawl-delay: 1
