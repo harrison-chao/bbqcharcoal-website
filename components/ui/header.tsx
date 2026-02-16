@@ -23,6 +23,11 @@ export default function Header() {
               </Link>
             </li>
             <li>
+              <Link href="/blog" className="text-sm font-medium text-gray-300 hover:text-white">
+                Blog
+              </Link>
+            </li>
+            <li>
               <Link href="/about" className="text-sm font-medium text-gray-300 hover:text-white">
                 About
               </Link>
