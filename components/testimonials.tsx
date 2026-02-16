@@ -1,8 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import useMasonry from "@/utils/useMasonry";
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
 import TestimonialImg01 from "@/public/images/testimonial-01.jpg";
 import TestimonialImg02 from "@/public/images/testimonial-02.jpg";
 import TestimonialImg03 from "@/public/images/testimonial-03.jpg";
@@ -14,7 +13,6 @@ const testimonials = [
     company: "Gulf Restaurant Supplies, UAE",
     content:
       "We have been sourcing BBQ charcoal from Bio Green Technology for 3 years. The quality is consistently excellent - low ash, high heat, and perfect for our restaurant needs. Highly recommended!",
-    categories: [1, 3, 5],
   },
   {
     img: TestimonialImg02,
@@ -22,7 +20,6 @@ const testimonials = [
     company: "Premium BBQ Co., USA",
     content:
       "After switching to Bio Green Technology, we reduced our charcoal costs by 20% while improving quality. Their responsive service and reliable delivery make them our go-to supplier.",
-    categories: [1, 2, 4],
   },
   {
     img: TestimonialImg03,
@@ -30,13 +27,11 @@ const testimonials = [
     company: "Tokyo Grill House, Japan",
     content:
       "The Binchotan charcoal quality is outstanding. Our customers love the authentic Japanese grilling experience. Bio Green Technology understands the exact specifications we need.",
-    categories: [1, 2, 4],
   },
 ];
 
 export default function Testimonials() {
   const [categories, setCategories] = useState<number[]>([1]);
-  const masonry = useMasonry(testimonials, categories);
 
   return (
     <section className="relative">
