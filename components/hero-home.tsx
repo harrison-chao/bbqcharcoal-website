@@ -1,5 +1,5 @@
-import VideoThumb from "@/public/images/hero-image-01.jpg";
-import ModalVideo from "@/components/modal-video";
+import Image from "next/image";
+import HeroImg from "@/public/images/生成高清照片.png";
 
 export default function HeroHome() {
   return (
@@ -47,15 +47,18 @@ export default function HeroHome() {
             </div>
           </div>
 
-          <ModalVideo
-            thumb={VideoThumb}
-            thumbWidth={1104}
-            thumbHeight={576}
-            thumbAlt="BBQ Charcoal Production"
-            video="videos//video.mp4"
-            videoWidth={1920}
-            videoHeight={1080}
-          />
+          <div className="relative mx-auto max-w-4xl" data-aos="fade-up" data-aos-delay={400}>
+            <div className="overflow-hidden rounded-2xl bg-gray-800">
+              <Image
+                src={HeroImg}
+                alt="Premium BBQ Charcoal Products"
+                width={1200}
+                height={600}
+                className="w-full"
+                priority
+              />
+            </div>
+          </div>
         </div>
       </div>
     </section>

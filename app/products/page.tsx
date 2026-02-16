@@ -4,6 +4,9 @@ export const metadata = {
 };
 
 import Image from "next/image";
+import BriquettesImg from "@/public/images/briquettes-405030.jpg";
+import LumpImg from "@/public/images/charcoal-7453437_1280.jpg";
+import BinchotanImg from "@/public/images/charcoal-5184954_1280.png";
 
 const products = [
   {
@@ -26,7 +29,7 @@ const products = [
       { label: "Size", value: "2.5cm - 5cm" },
     ],
     price: "$650-750/ton FOB Malaysia",
-    image: "/images/briquettes-405030.jpg",
+    image: BriquettesImg,
   },
   {
     id: "lump",
@@ -48,7 +51,7 @@ const products = [
       { label: "Size", value: "3cm - 15cm" },
     ],
     price: "$700-800/ton FOB Malaysia",
-    image: "/images/charcoal-7453437_1280.jpg",
+    image: LumpImg,
   },
   {
     id: "binchotan",
@@ -70,7 +73,7 @@ const products = [
       { label: "Size", value: "5cm - 12cm" },
     ],
     price: "$800-850/ton FOB Malaysia",
-    image: "/images/charcoal-5184954_1280.png",
+    image: BinchotanImg,
   },
 ];
 
@@ -97,9 +100,12 @@ export default function ProductsPage() {
               <div key={product.id} className={`flex flex-col gap-12 lg:flex-row lg:items-center ${index % 2 === 1 ? 'lg:flex-row-reverse' : ''}`}>
                 <div className="flex-1">
                   <div className="aspect-video relative overflow-hidden rounded-2xl bg-gray-800">
-                    <div className="absolute inset-0 flex items-center justify-center bg-gray-700 text-gray-400">
-                      <span className="text-lg">{product.name} Image</span>
-                    </div>
+                    <Image
+                      src={product.image}
+                      alt={product.name}
+                      fill
+                      className="object-cover"
+                    />
                   </div>
                 </div>
                 <div className="flex-1">

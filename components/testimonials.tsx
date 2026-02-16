@@ -2,9 +2,9 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import TestimonialImg01 from "@/public/images/testimonial-01.jpg";
-import TestimonialImg02 from "@/public/images/testimonial-02.jpg";
-import TestimonialImg03 from "@/public/images/testimonial-03.jpg";
+import TestimonialImg01 from "@/public/images/生成高清照片.png";
+import TestimonialImg02 from "@/public/images/生成高清照片 (3).png";
+import TestimonialImg03 from "@/public/images/烧烤炉.jpg";
 
 const testimonials = [
   {

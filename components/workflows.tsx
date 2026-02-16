@@ -1,7 +1,7 @@
 import Image from "next/image";
-import WorflowImg01 from "@/public/images/workflow-01.png";
-import WorflowImg02 from "@/public/images/workflow-02.png";
-import WorflowImg03 from "@/public/images/workflow-03.png";
+import WorflowImg01 from "@/public/images/briquettes-405030.jpg";
+import WorflowImg02 from "@/public/images/charcoal-7453437_1280.jpg";
+import WorflowImg03 from "@/public/images/charcoal-5184954_1280.png";
 import Spotlight from "@/components/spotlight";
 
 export default function Workflows() {
@@ -37,7 +37,7 @@ export default function Workflows() {
                   </svg>
                 </div>
                 <Image
-                  className="inline-flex"
+                  className="inline-flex h-48 w-full object-cover"
                   src={WorflowImg01}
                   width={350}
                   height={288}
@@ -63,7 +63,7 @@ export default function Workflows() {
                   </svg>
                 </div>
                 <Image
-                  className="inline-flex"
+                  className="inline-flex h-48 w-full object-cover"
                   src={WorflowImg02}
                   width={350}
                   height={288}
@@ -89,7 +89,7 @@ export default function Workflows() {
                   </svg>
                 </div>
                 <Image
-                  className="inline-flex"
+                  className="inline-flex h-48 w-full object-cover"
                   src={WorflowImg03}
                   width={350}
                   height={288}
