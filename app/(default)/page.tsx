@@ -1,6 +1,7 @@
 export const metadata = {
-  title: "Home - Open PRO",
-  description: "Page description",
+  title: "Premium BBQ Charcoal Export from Malaysia | Bio Green Technology",
+  description: "Leading BBQ charcoal supplier from Malaysia. BBQ Briquettes, Lump Charcoal, Binchotan. ISO/SGS certified. Exporting to 50+ countries worldwide. Request a quote today!",
+  keywords: "bbq charcoal, charcoal export, Malaysia charcoal supplier, BBQ briquettes, lump charcoal, binchotan, restaurant charcoal, bulk charcoal",
 };
 
 import PageIllustration from "@/components/page-illustration";
