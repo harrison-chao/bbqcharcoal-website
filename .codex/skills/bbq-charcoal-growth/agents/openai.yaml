@@ -1,0 +1,7 @@
+interface:
+  display_name: "BBQ Charcoal Growth"
+  short_description: "BBQ export growth operations"
+  default_prompt: "Use $bbq-charcoal-growth to run BBQ Charcoal Export SEO/GEO, landing page, lead tracking, buyer development, and growth loop work."
+
+policy:
+  allow_implicit_invocation: true
