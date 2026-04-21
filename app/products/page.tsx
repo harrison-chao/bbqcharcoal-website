@@ -212,6 +212,9 @@ export default function ProductsPage() {
                     <a
                       href="/contact"
                       className="btn bg-gradient-to-t from-orange-600 to-orange-500 bg-[length:100%_100%] bg-[bottom] text-white shadow-[inset_0px_1px_0px_0px_theme(colors.white/.16)] hover:bg-[length:100%_150%]"
+                      data-analytics-event="select_content"
+                      data-analytics-category="product_cta"
+                      data-analytics-label={`Request quote: ${product.name}`}
                     >
                       Request Quote
                     </a>
@@ -232,6 +235,9 @@ export default function ProductsPage() {
           <a
             href="/contact"
             className="btn bg-gradient-to-t from-orange-600 to-orange-500 bg-[length:100%_100%] bg-[bottom] text-white shadow-[inset_0px_1px_0px_0px_theme(colors.white/.16)] hover:bg-[length:100%_150%]"
+            data-analytics-event="select_content"
+            data-analytics-category="cta"
+            data-analytics-label="Products contact us"
           >
             Contact Us
           </a>

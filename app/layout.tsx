@@ -2,6 +2,7 @@ import "./css/style.css";
 
 import localFont from "next/font/local";
 
+import AnalyticsEvents from "@/components/analytics-events";
 import JsonLd from "@/components/json-ld";
 import Header from "@/components/ui/header";
 import {
@@ -165,6 +166,7 @@ export default function RootLayout({
       >
         <div className="flex min-h-screen flex-col overflow-hidden supports-[overflow:clip]:overflow-clip">
           <Header />
+          <AnalyticsEvents />
           {children}
         </div>
       </body>

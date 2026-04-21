@@ -33,6 +33,9 @@ export default function Cta() {
                 <a
                   className="btn group mb-4 w-full bg-gradient-to-t from-orange-600 to-orange-500 bg-[length:100%_100%] bg-[bottom] text-white shadow-[inset_0px_1px_0px_0px_theme(colors.white/.16)] hover:bg-[length:100%_150%] sm:mb-0 sm:w-auto"
                   href="/contact"
+                  data-analytics-event="select_content"
+                  data-analytics-category="cta"
+                  data-analytics-label="Bottom get quote"
                 >
                   <span className="relative inline-flex items-center">
                     Get a Quote
@@ -48,6 +51,9 @@ export default function Cta() {
                   href="https://wa.me/8618658820622"
                   target="_blank"
                   rel="noopener noreferrer"
+                  data-analytics-event="generate_lead"
+                  data-analytics-category="contact"
+                  data-analytics-label="Bottom WhatsApp"
                 >
                   <span className="relative inline-flex items-center">
                     WhatsApp Us

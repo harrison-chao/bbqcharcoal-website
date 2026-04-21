@@ -1,6 +1,7 @@
 "use client";
 
 import { FormEvent, useState } from "react";
+import { trackEvent } from "@/lib/analytics";
 
 type SubmitState =
   | { status: "idle"; message: "" }
@@ -34,6 +35,12 @@ export default function ContactForm() {
       }
 
       event.currentTarget.reset();
+      trackEvent("generate_lead", {
+        form_name: "contact_quote",
+        country: formData.get("country")?.toString(),
+        product_interest: formData.get("product")?.toString(),
+        quantity: formData.get("quantity")?.toString(),
+      });
       setState({
         status: "success",
         message: "Thanks. Your inquiry has been sent and we will respond within 24 hours.",

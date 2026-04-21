@@ -27,6 +27,9 @@ export default function HeroHome() {
               <a
                 className="btn group bg-gradient-to-t from-orange-600 to-orange-500 bg-[length:100%_100%] bg-[bottom] text-white shadow-[inset_0px_1px_0px_0px_theme(colors.white/.16)] hover:bg-[length:100%_150%]"
                 href="/contact"
+                data-analytics-event="select_content"
+                data-analytics-category="cta"
+                data-analytics-label="Hero request export quote"
               >
                 <span className="relative inline-flex items-center">
                   Request Export Quote
@@ -38,6 +41,9 @@ export default function HeroHome() {
               <a
                 className="btn border border-gray-700 bg-gray-900/80 text-gray-200 hover:border-orange-400/60"
                 href="/products"
+                data-analytics-event="select_content"
+                data-analytics-category="navigation"
+                data-analytics-label="Hero view product specs"
               >
                 View Product Specs
               </a>

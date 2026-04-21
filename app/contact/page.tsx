@@ -42,7 +42,13 @@ export default function ContactPage() {
 
                 <div className="rounded-xl bg-gray-800/50 p-6">
                   <h3 className="mb-2 font-semibold text-gray-200">Email</h3>
-                  <a href="mailto:expo@arterki.com" className="text-orange-500 hover:text-orange-400">
+                  <a
+                    href="mailto:expo@arterki.com"
+                    className="text-orange-500 hover:text-orange-400"
+                    data-analytics-event="generate_lead"
+                    data-analytics-category="contact"
+                    data-analytics-label="Contact email click"
+                  >
                     expo@arterki.com
                   </a>
                 </div>
@@ -54,6 +60,9 @@ export default function ContactPage() {
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="text-orange-500 hover:text-orange-400"
+                    data-analytics-event="generate_lead"
+                    data-analytics-category="contact"
+                    data-analytics-label="Contact WhatsApp click"
                   >
                     +86 186 5882 0622
                   </a>

@@ -80,12 +80,26 @@ export default function Footer() {
             <h3 className="text-sm font-medium text-gray-200">Contact</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <a className="text-orange-200/65 transition hover:text-orange-500" href="mailto:expo@arterki.com">
+                <a
+                  className="text-orange-200/65 transition hover:text-orange-500"
+                  href="mailto:expo@arterki.com"
+                  data-analytics-event="generate_lead"
+                  data-analytics-category="contact"
+                  data-analytics-label="Footer email click"
+                >
                   expo@arterki.com
                 </a>
               </li>
               <li>
-                <a className="text-orange-200/65 transition hover:text-orange-500" href="https://wa.me/8618658820622" target="_blank" rel="noopener noreferrer">
+                <a
+                  className="text-orange-200/65 transition hover:text-orange-500"
+                  href="https://wa.me/8618658820622"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  data-analytics-event="generate_lead"
+                  data-analytics-category="contact"
+                  data-analytics-label="Footer WhatsApp click"
+                >
                   +86 186 5882 0622
                 </a>
               </li>
