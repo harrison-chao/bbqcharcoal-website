@@ -23,10 +23,10 @@ export default function Cta() {
               className="animate-[gradient_6s_linear_infinite] bg-[linear-gradient(to_right,theme(colors.gray.200),theme(colors.orange.200),theme(colors.gray.50),theme(colors.orange.300),theme(colors.gray.200))] bg-[length:200%_auto] bg-clip-text pb-8 font-nacelle text-3xl font-semibold text-transparent md:text-4xl"
               data-aos="fade-up"
             >
-              Ready to Order Premium BBQ Charcoal?
+              Ready to compare a real charcoal quote?
             </h2>
             <p className="mb-8 text-lg text-gray-300" data-aos="fade-up" data-aos-delay={200}>
-              Contact us today for a free quote. We respond within 24 hours and offer sample shipments to verify quality.
+              Send your target product, destination port, packing size, and monthly volume. We will help you narrow the specification and next steps before sampling or container booking.
             </p>
             <div className="mx-auto max-w-xs sm:flex sm:max-w-none sm:justify-center">
               <div data-aos="fade-up" data-aos-delay={400}>

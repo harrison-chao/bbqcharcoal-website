@@ -1,15 +1,8 @@
 import "./css/style.css";
 
-import { Inter } from "next/font/google";
 import localFont from "next/font/local";
 
 import Header from "@/components/ui/header";
-
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-inter",
-  display: "swap",
-});
 
 const nacelle = localFont({
   src: [
@@ -40,14 +33,14 @@ const nacelle = localFont({
 
 export const metadata = {
   title: {
-    default: "Premium BBQ Charcoal Export from Malaysia | Bio Green Technology",
-    template: "%s | Bio Green Technology",
+    default: "BBQ Charcoal Export from Malaysia | Bulk Briquettes, Lump & Binchotan",
+    template: "%s | BBQ Charcoal Export",
   },
-  description: "Leading BBQ charcoal supplier from Malaysia. BBQ Briquettes, Lump Charcoal, Binchotan. ISO/SGS certified. Exporting to 50+ countries worldwide.",
+  description: "Malaysia BBQ charcoal export supplier for bulk briquettes, lump charcoal, and binchotan. Product specs, OEM packaging, samples, and container shipping support.",
   keywords: ["bbq charcoal", "charcoal export", "Malaysia charcoal supplier", "BBQ briquettes", "lump charcoal", "binchotan", "restaurant charcoal", "bulk charcoal"],
-  authors: [{ name: "Bio Green Technology" }],
-  creator: "Bio Green Technology",
-  publisher: "Bio Green Technology",
+  authors: [{ name: "BBQ Charcoal Export" }],
+  creator: "BBQ Charcoal Export",
+  publisher: "BBQ Charcoal Export",
   formatDetection: {
     email: false,
     address: false,
@@ -58,23 +51,23 @@ export const metadata = {
     type: "website",
     locale: "en_US",
     url: "https://bbqcharcoalexport.com",
-    siteName: "Bio Green Technology",
-    title: "Premium BBQ Charcoal Export from Malaysia | Bio Green Technology",
-    description: "Leading BBQ charcoal supplier from Malaysia. BBQ Briquettes, Lump Charcoal, Binchotan. ISO/SGS certified. Exporting to 50+ countries worldwide.",
+    siteName: "BBQ Charcoal Export",
+    title: "BBQ Charcoal Export from Malaysia | Bulk Briquettes, Lump & Binchotan",
+    description: "Malaysia BBQ charcoal export supplier for bulk briquettes, lump charcoal, and binchotan with OEM packaging and container shipping support.",
     images: [
       {
-        url: "/images/og-image.jpg",
-        width: 1200,
-        height: 630,
-        alt: "Bio Green Technology - Premium BBQ Charcoal",
+        url: "/images/hero-charcoal-export.png",
+        width: 1024,
+        height: 1024,
+        alt: "Bulk BBQ charcoal export products",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Premium BBQ Charcoal Export from Malaysia | Bio Green Technology",
-    description: "Leading BBQ charcoal supplier from Malaysia. BBQ Briquettes, Lump Charcoal, Binchotan. ISO/SGS certified.",
-    images: ["/images/og-image.jpg"],
+    title: "BBQ Charcoal Export from Malaysia",
+    description: "Bulk briquettes, lump charcoal, and binchotan with OEM packaging and export logistics support.",
+    images: ["/images/hero-charcoal-export.png"],
   },
   robots: {
     index: true,
@@ -114,7 +107,7 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${inter.variable} ${nacelle.variable} bg-gray-950 font-inter text-base text-gray-200 antialiased`}
+        className={`${nacelle.variable} bg-gray-950 font-inter text-base text-gray-200 antialiased`}
       >
         <div className="flex min-h-screen flex-col overflow-hidden supports-[overflow:clip]:overflow-clip">
           <Header />

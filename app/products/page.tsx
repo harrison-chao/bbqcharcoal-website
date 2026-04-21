@@ -1,6 +1,6 @@
 export const metadata = {
-  title: "BBQ Charcoal Products | Briquettes, Lump, Binchotan | Bio Green Technology",
-  description: "Browse our premium BBQ charcoal products: BBQ Briquettes, Lump Charcoal, and Binchotan. ISO/SGS certified, export to 50+ countries. Request a quote today!",
+  title: "BBQ Charcoal Products | Briquettes, Lump Charcoal & Binchotan",
+  description: "Compare bulk BBQ briquettes, lump charcoal, and binchotan for restaurant, wholesale, and private-label export orders.",
 };
 
 import Image from "next/image";
@@ -87,7 +87,7 @@ export default function ProductsPage() {
               Our Products
             </h1>
             <p className="mx-auto max-w-2xl text-lg text-orange-200/65">
-              Premium BBQ charcoal products tailored for restaurants, distributors, and retailers worldwide.
+              Bulk BBQ charcoal products tailored for restaurants, importers, distributors, and private-label retail programs.
             </p>
           </div>
         </div>
@@ -156,7 +156,7 @@ export default function ProductsPage() {
         <div className="mx-auto max-w-4xl px-4 text-center sm:px-6">
           <h2 className="mb-4 font-nacelle text-3xl font-semibold text-gray-200">Need Custom Specifications?</h2>
           <p className="mb-8 text-orange-200/65">
-            We offer OEM/ODM services for bulk orders. Contact us with your specific requirements.
+            Share your burn target, packing size, destination port, and monthly volume. We can recommend the closest product line and quotation basis.
           </p>
           <a
             href="/contact"

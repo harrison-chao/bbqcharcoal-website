@@ -2,21 +2,23 @@ import Link from "next/link";
 
 export default function Logo() {
   return (
-    <Link href="/" className="inline-flex shrink-0 items-center gap-2" aria-label="Bio Green Technology">
-      <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="20" cy="20" r="18" fill="url(#logoGradient)" />
-        <path d="M20 8C20 8 12 14 12 20C12 26 20 32 20 32C20 32 28 26 28 20C28 14 20 8 20 8Z" fill="white" />
-        <path d="M20 14C20 14 16 17 16 20C16 23 20 26 20 26C20 26 24 23 24 20C24 17 20 14 20 14Z" fill="#F97316" />
-        <circle cx="20" cy="20" r="3" fill="white" />
+    <Link href="/" className="inline-flex shrink-0 items-center gap-2" aria-label="BBQ Charcoal Export">
+      <svg width="38" height="38" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <rect width="64" height="64" rx="14" fill="#111827" />
+        <path d="M16 44.5C22.8 50.8 38.7 51.3 48 43.8C42.9 44.4 37.3 43.5 32.8 41C27.7 38.2 21.7 39.6 16 44.5Z" fill="#EAB308" />
+        <path d="M31.7 12C37.2 18.1 42.2 24.5 42.2 31.4C42.2 38.7 37.5 43.7 31.8 43.7C26.2 43.7 21.8 38.9 21.8 32.2C21.8 27.1 24.4 22.6 28.1 18.4C28.4 23.5 30.8 27.1 34.7 29.6C35 24.5 33.9 18.8 31.7 12Z" fill="url(#logoFlame)" />
+        <path d="M32.2 26.5C35.1 30.1 37.2 33.2 37.2 36.8C37.2 41.1 34.7 43.9 31.7 43.9C28.7 43.9 26.4 41.2 26.4 37.4C26.4 34.4 27.8 31.6 30.3 28.6C30.6 31.9 31.7 34.1 33.6 35.6C33.7 32.2 33.2 29.1 32.2 26.5Z" fill="#FFF7ED" />
         <defs>
-          <linearGradient id="logoGradient" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
-            <stop stopColor="#F97316" />
-            <stop offset="1" stopColor="#EA580C" />
+          <linearGradient id="logoFlame" x1="24" y1="14" x2="43" y2="45" gradientUnits="userSpaceOnUse">
+            <stop stopColor="#FBBF24" />
+            <stop offset=".52" stopColor="#F97316" />
+            <stop offset="1" stopColor="#B45309" />
           </linearGradient>
         </defs>
       </svg>
-      <span className="font-nacelle text-lg font-semibold text-white">
-        Bio <span className="text-orange-500">Green</span>
+      <span className="font-nacelle text-base font-semibold leading-tight text-white sm:text-lg">
+        BBQ <span className="text-orange-400">Charcoal</span>
+        <span className="hidden text-gray-400 sm:inline"> Export</span>
       </span>
     </Link>
   );

@@ -55,19 +55,19 @@ export default function Footer() {
             </ul>
           </div>
           <div className="space-y-2">
-            <h3 className="text-sm font-medium text-gray-200">Certifications</h3>
+            <h3 className="text-sm font-medium text-gray-200">Buyer Support</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <span className="text-orange-200/65">ISO 9001</span>
+                <span className="text-orange-200/65">Product specs</span>
               </li>
               <li>
-                <span className="text-orange-200/65">SGS Certified</span>
+                <span className="text-orange-200/65">OEM packaging</span>
               </li>
               <li>
-                <span className="text-orange-200/65">FDA Approved</span>
+                <span className="text-orange-200/65">Sample support</span>
               </li>
               <li>
-                <span className="text-orange-200/65">HALAL Certified</span>
+                <span className="text-orange-200/65">FOB/CIF shipping</span>
               </li>
             </ul>
           </div>
@@ -89,7 +89,7 @@ export default function Footer() {
         </div>
         <div className="border-t border-gray-800 py-6">
           <p className="text-center text-sm text-gray-500">
-            © 2024 Bio Green Technology Sdn Bhd. All rights reserved.
+            © 2026 BBQ Charcoal Export. All rights reserved.
           </p>
         </div>
       </div>

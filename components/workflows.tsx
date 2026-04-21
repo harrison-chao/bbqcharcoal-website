@@ -16,10 +16,10 @@ export default function Workflows() {
               </span>
             </div>
             <h2 className="animate-[gradient_6s_linear_infinite] bg-[linear-gradient(to_right,theme(colors.gray.200),theme(colors.orange.200),theme(colors.gray.50),theme(colors.orange.300),theme(colors.gray.200))] bg-[length:200%_auto] bg-clip-text pb-4 font-nacelle text-3xl font-semibold text-transparent md:text-4xl">
-              Premium Charcoal Products
+              Charcoal lines buyers can specify clearly
             </h2>
             <p className="text-lg text-orange-200/65">
-              We offer a wide range of BBQ charcoal products to meet your specific needs. From restaurant-grade briquettes to premium lump charcoal and authentic Japanese Binchotan.
+              Each product page is framed around the details importers ask for first: burn time, ash, moisture, packing format, container loading, and private-label options.
             </p>
           </div>
           <Spotlight className="group mx-auto grid max-w-sm items-start gap-6 lg:max-w-none lg:grid-cols-3">
@@ -45,7 +45,7 @@ export default function Workflows() {
                 />
                 <div className="p-6">
                   <h3 className="mb-2 font-nacelle text-xl font-semibold text-gray-200">BBQ Briquettes</h3>
-                  <p className="text-orange-200/65">High-density coal dust compressed into uniform shapes. Long burn time, consistent heat. Perfect for restaurants and commercial use.</p>
+                  <p className="text-orange-200/65">Uniform pillow or hex shapes for restaurants and retail packs where predictable heat, easy stacking, and clean presentation matter.</p>
                 </div>
               </div>
             </a>
@@ -71,7 +71,7 @@ export default function Workflows() {
                 />
                 <div className="p-6">
                   <h3 className="mb-2 font-nacelle text-xl font-semibold text-gray-200">Lump Charcoal</h3>
-                  <p className="text-orange-200/65">Natural hardwood charcoal in various sizes. Quick lighting, high heat, authentic smoky flavor. Ideal for grilling enthusiasts.</p>
+                  <p className="text-orange-200/65">Selected hardwood lumps for grill houses, wholesalers, and outdoor cooking brands that want natural texture and strong heat.</p>
                 </div>
               </div>
             </a>
@@ -97,7 +97,7 @@ export default function Workflows() {
                 />
                 <div className="p-6">
                   <h3 className="mb-2 font-nacelle text-xl font-semibold text-gray-200">Binchotan</h3>
-                  <p className="text-orange-200/65">Premium Japanese white charcoal. Ultra-high heat, long burn time, minimal smoke. The choice of professional chefs worldwide.</p>
+                  <p className="text-orange-200/65">High-temperature white charcoal for professional kitchens that need long burn time, low smoke, and stable service performance.</p>
                 </div>
               </div>
             </a>

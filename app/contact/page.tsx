@@ -1,7 +1,9 @@
 export const metadata = {
-  title: "Contact Us | Get a Quote for BBQ Charcoal | Bio Green Technology",
-  description: "Contact Bio Green Technology for BBQ charcoal quotes. Email: expo@arterki.com | WhatsApp: +86 186 5882 0622. We respond within 24 hours!",
+  title: "Contact Us | Get a Bulk BBQ Charcoal Export Quote",
+  description: "Contact BBQ Charcoal Export for briquettes, lump charcoal, and binchotan quotes. Email: expo@arterki.com | WhatsApp: +86 186 5882 0622.",
 };
+
+import ContactForm from "@/components/contact-form";
 
 export default function ContactPage() {
   return (
@@ -28,7 +30,7 @@ export default function ContactPage() {
               <div className="space-y-6">
                 <div className="rounded-xl bg-gray-800/50 p-6">
                   <h3 className="mb-2 font-semibold text-gray-200">Company</h3>
-                  <p className="text-gray-400">Bio Green Technology Sdn Bhd</p>
+                  <p className="text-gray-400">BBQ Charcoal Export</p>
                   <p className="mt-1 text-sm text-gray-500">
                     Lot 2000, Jalan Muar Pagoh, Batu 11,<br />
                     84600, Pagoh, Muar, Johor, Malaysia
@@ -83,88 +85,7 @@ export default function ContactPage() {
             <div>
               <div className="rounded-2xl bg-gray-800/50 p-8">
                 <h2 className="mb-6 font-nacelle text-2xl font-semibold text-gray-200">Request a Quote</h2>
-                <form className="space-y-6">
-                  <div>
-                    <label className="mb-2 block text-sm font-medium text-gray-300">Company Name *</label>
-                    <input
-                      type="text"
-                      required
-                      className="w-full rounded-lg border border-gray-700 bg-gray-900 px-4 py-2 text-gray-200 focus:border-orange-500 focus:outline-none focus:ring-2 focus:ring-orange-500/50"
-                      placeholder="Your company name"
-                    />
-                  </div>
-                  <div>
-                    <label className="mb-2 block text-sm font-medium text-gray-300">Email *</label>
-                    <input
-                      type="email"
-                      required
-                      className="w-full rounded-lg border border-gray-700 bg-gray-900 px-4 py-2 text-gray-200 focus:border-orange-500 focus:outline-none focus:ring-2 focus:ring-orange-500/50"
-                      placeholder="your@email.com"
-                    />
-                  </div>
-                  <div>
-                    <label className="mb-2 block text-sm font-medium text-gray-300">Country *</label>
-                    <select
-                      required
-                      className="w-full rounded-lg border border-gray-700 bg-gray-900 px-4 py-2 text-gray-200 focus:border-orange-500 focus:outline-none focus:ring-2 focus:ring-orange-500/50"
-                    >
-                      <option value="">Select country</option>
-                      <option value="UAE">UAE</option>
-                      <option value="Saudi Arabia">Saudi Arabia</option>
-                      <option value="Kuwait">Kuwait</option>
-                      <option value="Qatar">Qatar</option>
-                      <option value="Bahrain">Bahrain</option>
-                      <option value="USA">USA</option>
-                      <option value="Australia">Australia</option>
-                      <option value="Other">Other</option>
-                    </select>
-                  </div>
-                  <div>
-                    <label className="mb-2 block text-sm font-medium text-gray-300">Product Interest *</label>
-                    <select
-                      required
-                      className="w-full rounded-lg border border-gray-700 bg-gray-900 px-4 py-2 text-gray-200 focus:border-orange-500 focus:outline-none focus:ring-2 focus:ring-orange-500/50"
-                    >
-                      <option value="">Select product</option>
-                      <option value="BBQ Briquettes">BBQ Briquettes ($650-750/ton)</option>
-                      <option value="Lump Charcoal">Lump Charcoal ($700-800/ton)</option>
-                      <option value="Binchotan">Binchotan ($800-850/ton)</option>
-                    </select>
-                  </div>
-                  <div>
-                    <label className="mb-2 block text-sm font-medium text-gray-300">Quantity *</label>
-                    <select
-                      required
-                      className="w-full rounded-lg border border-gray-700 bg-gray-900 px-4 py-2 text-gray-200 focus:border-orange-500 focus:outline-none focus:ring-2 focus:ring-orange-500/50"
-                    >
-                      <option value="">Select quantity</option>
-                      <option value="1-5 tons">1-5 tons (Trial)</option>
-                      <option value="5-20 tons">5-20 tons</option>
-                      <option value="20ft Container">20ft Container (20-25 tons)</option>
-                      <option value="40ft Container">40ft Container (25-28 tons)</option>
-                    </select>
-                  </div>
-                  <div>
-                    <label className="mb-2 block text-sm font-medium text-gray-300">Message</label>
-                    <textarea
-                      rows={4}
-                      className="w-full rounded-lg border border-gray-700 bg-gray-900 px-4 py-2 text-gray-200 focus:border-orange-500 focus:outline-none focus:ring-2 focus:ring-orange-500/50"
-                      placeholder="Your requirements, questions, or specific needs..."
-                    />
-                  </div>
-                  <button
-                    type="submit"
-                    className="w-full rounded-lg bg-gradient-to-t from-orange-600 to-orange-500 py-3 font-semibold text-white shadow-[inset_0px_1px_0px_0px_theme(colors.white/.16)] hover:bg-[length:100%_150%]"
-                  >
-                    Submit Inquiry
-                  </button>
-                  <p className="text-center text-xs text-gray-500">
-                    Or email directly:{" "}
-                    <a href="mailto:expo@arterki.com" className="text-orange-500">
-                      expo@arterki.com
-                    </a>
-                  </p>
-                </form>
+                <ContactForm />
               </div>
             </div>
           </div>

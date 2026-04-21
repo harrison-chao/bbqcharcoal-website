@@ -1,38 +1,27 @@
-"use client";
-
-import { useState } from "react";
 import Image from "next/image";
-import TestimonialImg01 from "@/public/images/生成高清照片.png";
-import TestimonialImg02 from "@/public/images/生成高清照片 (3).png";
-import TestimonialImg03 from "@/public/images/烧烤炉.jpg";
+import PackingImg from "@/public/images/20250127_1506_Charcoal Packing Process_simple_compose_01jjk9a36fe6gb1nfag6sq7tr5.gif";
+import LoadingImg from "@/public/images/20250127_1433_Coal Loading at Port_simple_compose_01jjk7dyw7fnartd970r3xnned.gif";
+import CaseImg from "@/public/images/客户案例.jpg";
 
-const testimonials = [
+const proofPoints = [
   {
-    img: TestimonialImg01,
-    name: "Ahmed Rashid",
-    company: "Gulf Restaurant Supplies, UAE",
-    content:
-      "We have been sourcing BBQ charcoal from Bio Green Technology for 3 years. The quality is consistently excellent - low ash, high heat, and perfect for our restaurant needs. Highly recommended!",
+    img: PackingImg,
+    title: "Packing visibility",
+    content: "Packing photos or short clips help buyers confirm bag style, sealing, carton plan, and pallet readiness before container loading.",
   },
   {
-    img: TestimonialImg02,
-    name: "John Smith",
-    company: "Premium BBQ Co., USA",
-    content:
-      "After switching to Bio Green Technology, we reduced our charcoal costs by 20% while improving quality. Their responsive service and reliable delivery make them our go-to supplier.",
+    img: LoadingImg,
+    title: "Container loading coordination",
+    content: "Shipment coordination covers loading plan, export documents, and route discussion for FOB or CIF orders.",
   },
   {
-    img: TestimonialImg03,
-    name: "Takeshi Yamamoto",
-    company: "Tokyo Grill House, Japan",
-    content:
-      "The Binchotan charcoal quality is outstanding. Our customers love the authentic Japanese grilling experience. Bio Green Technology understands the exact specifications we need.",
+    img: CaseImg,
+    title: "Buyer use-case matching",
+    content: "Restaurants, importers, and private-label teams can match the charcoal line to their burn profile, packing format, and retail price point.",
   },
 ];
 
 export default function Testimonials() {
-  const [categories, setCategories] = useState<number[]>([1]);
-
   return (
     <section className="relative">
       <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 md:py-20">
@@ -43,29 +32,30 @@ export default function Testimonials() {
             </span>
           </div>
           <h2 className="animate-[gradient_6s_linear_infinite] bg-[linear-gradient(to_right,theme(colors.gray.200),theme(colors.orange.200),theme(colors.gray.50),theme(colors.orange.300),theme(colors.gray.200))] bg-[length:200%_auto] bg-clip-text pb-4 font-nacelle text-3xl font-semibold text-transparent md:text-4xl">
-            Trusted by Restaurants Worldwide
+            Visual proof beats generic claims
           </h2>
+          <p className="mx-auto max-w-2xl text-lg text-orange-200/65">
+            The site now emphasizes the evidence B2B buyers expect during sourcing: packing, loading, and fit-for-market product selection.
+          </p>
         </div>
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {testimonials.map((testimonial, index) => (
+          {proofPoints.map((item) => (
             <article
-              key={index}
-              className="relative rounded-2xl bg-gray-900/50 p-6 backdrop-blur-sm"
+              key={item.title}
+              className="relative overflow-hidden rounded-lg border border-gray-800 bg-gray-900/50"
             >
-              <div className="mb-4 flex items-center gap-4">
-                <Image
-                  src={testimonial.img}
-                  alt={testimonial.name}
-                  width={48}
-                  height={48}
-                  className="rounded-full object-cover"
-                />
-                <div>
-                  <h3 className="font-semibold text-gray-200">{testimonial.name}</h3>
-                  <p className="text-sm text-orange-400">{testimonial.company}</p>
-                </div>
+              <Image
+                src={item.img}
+                alt={item.title}
+                width={600}
+                height={360}
+                className="aspect-video w-full object-cover"
+                unoptimized
+              />
+              <div className="p-6">
+                <h3 className="mb-2 font-nacelle text-xl font-semibold text-gray-100">{item.title}</h3>
+                <p className="leading-7 text-orange-200/65">{item.content}</p>
               </div>
-              <p className="text-gray-300">{testimonial.content}</p>
             </article>
           ))}
         </div>
