@@ -13,3 +13,11 @@ export function trackEvent(eventName: string, params: AnalyticsParams = {}) {
 
   window.gtag("event", eventName, params);
 }
+
+export function trackPageView(path: string, title: string) {
+  trackEvent("page_view", {
+    page_path: path,
+    page_location: `${window.location.origin}${path}`,
+    page_title: title,
+  });
+}

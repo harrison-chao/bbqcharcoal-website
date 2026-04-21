@@ -1,7 +1,7 @@
 "use client";
 
 import { FormEvent, useState } from "react";
-import { trackEvent } from "@/lib/analytics";
+import { useRouter } from "next/navigation";
 
 type SubmitState =
   | { status: "idle"; message: "" }
@@ -13,6 +13,7 @@ const fieldClass =
   "w-full rounded-lg border border-gray-700 bg-gray-900 px-4 py-2 text-gray-200 focus:border-orange-500 focus:outline-none focus:ring-2 focus:ring-orange-500/50";
 
 export default function ContactForm() {
+  const router = useRouter();
   const [state, setState] = useState<SubmitState>({ status: "idle", message: "" });
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
@@ -35,16 +36,20 @@ export default function ContactForm() {
       }
 
       event.currentTarget.reset();
-      trackEvent("generate_lead", {
-        form_name: "contact_quote",
-        country: formData.get("country")?.toString(),
-        product_interest: formData.get("product")?.toString(),
-        quantity: formData.get("quantity")?.toString(),
-      });
+      window.sessionStorage.setItem(
+        "bbqLeadSubmission",
+        JSON.stringify({
+          country: formData.get("country")?.toString(),
+          product_interest: formData.get("product")?.toString(),
+          quantity: formData.get("quantity")?.toString(),
+          submitted_at: new Date().toISOString(),
+        }),
+      );
       setState({
         status: "success",
         message: "Thanks. Your inquiry has been sent and we will respond within 24 hours.",
       });
+      router.push("/thank-you?submitted=1");
     } catch (error) {
       setState({
         status: "error",
