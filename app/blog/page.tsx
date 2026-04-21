@@ -1,11 +1,16 @@
 export const metadata = {
-  title: "Blog | BBQ Charcoal Industry Insights | Bio Green Technology",
+  title: "Blog | BBQ Charcoal Industry Insights",
   description: "Expert insights on BBQ charcoal industry, quality standards, export guide, and trade tips. Learn about BBQ charcoal specifications, market trends, and sourcing best practices.",
   keywords: "bbq charcoal blog, charcoal industry news, charcoal export guide, BBQ charcoal quality, charcoal specifications",
+  alternates: {
+    canonical: "/blog",
+  },
 };
 
 import Link from "next/link";
 import Image from "next/image";
+import JsonLd from "@/components/json-ld";
+import { absoluteUrl, siteName, siteUrl } from "@/lib/seo";
 import BlogImg1 from "@/public/images/生成高清照片.png";
 import BlogImg2 from "@/public/images/briquettes-405030.jpg";
 import BlogImg3 from "@/public/images/charcoal-7453437_1280.jpg";
@@ -105,8 +110,29 @@ const blogPosts = [
 ];
 
 export default function BlogPage() {
+  const blogJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "@id": `${siteUrl}/blog#blog`,
+    url: `${siteUrl}/blog`,
+    name: "BBQ Charcoal Industry Insights",
+    publisher: {
+      "@type": "Organization",
+      name: siteName,
+    },
+    blogPost: blogPosts.map((post) => ({
+      "@type": "BlogPosting",
+      headline: post.title,
+      description: post.excerpt,
+      url: `${siteUrl}/blog/${post.slug}`,
+      datePublished: new Date(post.date).toISOString(),
+      image: absoluteUrl(post.image.src),
+    })),
+  };
+
   return (
     <main className="flex-1">
+      <JsonLd data={blogJsonLd} />
       <section className="relative overflow-hidden pt-32 pb-16">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <div className="text-center">

@@ -1,6 +1,8 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
+import JsonLd from "@/components/json-ld";
+import { siteName, siteUrl } from "@/lib/seo";
 import BlogImg1 from "@/public/images/生成高清照片.png";
 import BlogImg2 from "@/public/images/briquettes-405030.jpg";
 import BlogImg3 from "@/public/images/charcoal-7453437_1280.jpg";
@@ -1145,8 +1147,24 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   }
   
   return {
-    title: `${post.title} | Bio Green Technology Blog`,
+    title: `${post.title} | BBQ Charcoal Export Blog`,
     description: post.excerpt,
+    alternates: {
+      canonical: `/blog/${slug}`,
+    },
+    openGraph: {
+      type: "article",
+      title: post.title,
+      description: post.excerpt,
+      url: `${siteUrl}/blog/${slug}`,
+      publishedTime: new Date(post.date).toISOString(),
+      images: [
+        {
+          url: post.image.src,
+          alt: post.title,
+        },
+      ],
+    },
   };
 }
 
@@ -1157,9 +1175,62 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
   if (!post) {
     notFound();
   }
+
+  const articleJsonLd = [
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "@id": `${siteUrl}/blog/${slug}#article`,
+      mainEntityOfPage: `${siteUrl}/blog/${slug}`,
+      headline: post.title,
+      description: post.excerpt,
+      articleSection: post.category,
+      datePublished: new Date(post.date).toISOString(),
+      dateModified: new Date(post.date).toISOString(),
+      image: `${siteUrl}${post.image.src}`,
+      author: {
+        "@type": "Organization",
+        name: siteName,
+      },
+      publisher: {
+        "@type": "Organization",
+        name: siteName,
+        logo: {
+          "@type": "ImageObject",
+          url: `${siteUrl}/logo.svg`,
+        },
+      },
+      inLanguage: "en",
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "Home",
+          item: siteUrl,
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "Blog",
+          item: `${siteUrl}/blog`,
+        },
+        {
+          "@type": "ListItem",
+          position: 3,
+          name: post.title,
+          item: `${siteUrl}/blog/${slug}`,
+        },
+      ],
+    },
+  ];
   
   return (
     <main className="flex-1">
+      <JsonLd data={articleJsonLd} />
       <article>
         <div className="relative h-96 w-full">
           <Image
@@ -1211,7 +1282,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
           <div className="mt-16 rounded-2xl bg-gray-800/50 p-8">
             <h3 className="mb-4 text-xl font-semibold text-white">Ready to Order?</h3>
             <p className="mb-6 text-gray-300">
-              Contact Bio Green Technology for premium BBQ charcoal. We supply restaurants, distributors, and retailers worldwide.
+              Contact BBQ Charcoal Export for premium BBQ charcoal. We supply restaurants, distributors, and retailers worldwide.
             </p>
             <div className="flex flex-col gap-4 sm:flex-row">
               <a

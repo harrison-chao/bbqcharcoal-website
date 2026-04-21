@@ -23,11 +23,16 @@ export default function Header() {
               </Link>
             </li>
             <li className="hidden sm:block">
+              <Link href="/factory-inspection" className="text-sm font-medium text-gray-300 hover:text-white">
+                Inspection
+              </Link>
+            </li>
+            <li className="hidden md:block">
               <Link href="/blog" className="text-sm font-medium text-gray-300 hover:text-white">
                 Blog
               </Link>
             </li>
-            <li className="hidden sm:block">
+            <li className="hidden md:block">
               <Link href="/about" className="text-sm font-medium text-gray-300 hover:text-white">
                 About
               </Link>

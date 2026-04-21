@@ -2,7 +2,18 @@ import "./css/style.css";
 
 import localFont from "next/font/local";
 
+import JsonLd from "@/components/json-ld";
 import Header from "@/components/ui/header";
+import {
+  absoluteUrl,
+  contactEmail,
+  factoryAddress,
+  legalName,
+  phoneNumber,
+  siteName,
+  siteUrl,
+  whatsappUrl,
+} from "@/lib/seo";
 
 const nacelle = localFont({
   src: [
@@ -46,12 +57,15 @@ export const metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL("https://bbqcharcoalexport.com"),
+  metadataBase: new URL(siteUrl),
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://bbqcharcoalexport.com",
-    siteName: "BBQ Charcoal Export",
+    url: siteUrl,
+    siteName,
     title: "BBQ Charcoal Export from Malaysia | Bulk Briquettes, Lump & Binchotan",
     description: "Malaysia BBQ charcoal export supplier for bulk briquettes, lump charcoal, and binchotan with OEM packaging and container shipping support.",
     images: [
@@ -87,9 +101,49 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const organizationJsonLd = {
+    "@context": "https://schema.org",
+    "@type": ["Organization", "Manufacturer"],
+    "@id": `${siteUrl}/#organization`,
+    name: siteName,
+    legalName,
+    url: siteUrl,
+    logo: absoluteUrl("/logo.svg"),
+    email: contactEmail,
+    telephone: phoneNumber,
+    sameAs: [whatsappUrl],
+    address: {
+      "@type": "PostalAddress",
+      ...factoryAddress,
+    },
+    makesOffer: [
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Product",
+          name: "Bulk BBQ Briquettes",
+          category: "BBQ charcoal",
+        },
+      },
+    ],
+  };
+
+  const websiteJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": `${siteUrl}/#website`,
+    url: siteUrl,
+    name: siteName,
+    publisher: {
+      "@id": `${siteUrl}/#organization`,
+    },
+    inLanguage: "en",
+  };
+
   return (
     <html lang="en">
       <head>
+        <JsonLd data={[organizationJsonLd, websiteJsonLd]} />
         {/* Google Analytics */}
         <script
           async

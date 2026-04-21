@@ -1,6 +1,9 @@
 export const metadata = {
-  title: "About Us | Bio Green Technology - Malaysia BBQ Charcoal Manufacturer",
-  description: "Learn about Bio Green Technology - 15+ years experience, ISO/SGS/FDA/HALAL certified BBQ charcoal manufacturer in Muar, Johor, Malaysia.",
+  title: "About the Malaysia BBQ Charcoal Factory | BBQ Charcoal Export",
+  description: "Learn about the Malaysia BBQ briquette charcoal factory in Pagoh, Muar, Johor, including documented 800 MT monthly capacity, production equipment, storage, and quality controls.",
+  alternates: {
+    canonical: "/about",
+  },
 };
 
 import Image from "next/image";

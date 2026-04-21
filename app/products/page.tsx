@@ -1,9 +1,14 @@
 export const metadata = {
   title: "BBQ Charcoal Products | Briquettes, Lump Charcoal & Binchotan",
   description: "Compare bulk BBQ briquettes, lump charcoal, and binchotan for restaurant, wholesale, and private-label export orders.",
+  alternates: {
+    canonical: "/products",
+  },
 };
 
 import Image from "next/image";
+import JsonLd from "@/components/json-ld";
+import { absoluteUrl, legalName, siteName, siteUrl } from "@/lib/seo";
 import BriquettesImg from "@/public/images/briquettes-405030.jpg";
 import LumpImg from "@/public/images/charcoal-7453437_1280.jpg";
 import BinchotanImg from "@/public/images/charcoal-5184954_1280.png";
@@ -12,7 +17,7 @@ const products = [
   {
     id: "briquettes",
     name: "BBQ Briquettes",
-    description: "High-density coal dust compressed into uniform pillow-shaped briquettes. Perfect for restaurants and commercial grilling.",
+    description: "Factory-produced, high-density briquettes for importers, restaurants, distributors, and private-label retail programs.",
     features: [
       "Long burn time (4-5 hours)",
       "Consistent heat output",
@@ -34,7 +39,7 @@ const products = [
   {
     id: "lump",
     name: "Lump Charcoal",
-    description: "Natural hardwood charcoal in various sizes. Made from selected hardwood species for authentic smoky flavor.",
+    description: "Natural hardwood charcoal sourcing option for buyers who prioritize quick lighting and a stronger smoky grilling profile.",
     features: [
       "Quick lighting",
       "High heat output",
@@ -56,7 +61,7 @@ const products = [
   {
     id: "binchotan",
     name: "Binchotan (White Charcoal)",
-    description: "Premium Japanese-style white charcoal. Ultra-high heat with long burn time. The choice of professional chefs.",
+    description: "Premium Japanese-style white charcoal sourcing option for professional chefs and higher-value restaurant channels.",
     features: [
       "Ultra-high heat",
       "Very long burn time (6-8 hours)",
@@ -77,9 +82,75 @@ const products = [
   },
 ];
 
+const productFaqs = [
+  {
+    question: "Which product is the strongest fit for container-volume importers?",
+    answer:
+      "BBQ briquettes are the most documented factory-backed line on this site. They offer consistent shape, predictable burn behavior, and the clearest production-capacity evidence for repeat export orders.",
+  },
+  {
+    question: "Can product specifications be adjusted for private-label buyers?",
+    answer:
+      "Buyers can request target burn time, packing weight, carton or bag format, destination port, and monthly volume. The quote team will match the request to the closest available production or sourcing option.",
+  },
+  {
+    question: "Are lump charcoal and binchotan produced in the same inspected line?",
+    answer:
+      "The third-party inspection evidence focuses on briquette charcoal production. Lump charcoal and binchotan are presented as sourcing options and should be confirmed by specification, sample, and batch documentation before order placement.",
+  },
+];
+
 export default function ProductsPage() {
+  const productJsonLd = products.map((product) => ({
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "@id": `${siteUrl}/products#${product.id}`,
+    name: product.name,
+    description: product.description,
+    category: "BBQ charcoal",
+    brand: {
+      "@type": "Brand",
+      name: siteName,
+    },
+    manufacturer: {
+      "@type": "Organization",
+      name: product.id === "briquettes" ? legalName : siteName,
+    },
+    image: absoluteUrl(`/images/${product.id === "briquettes" ? "briquettes-405030.jpg" : product.id === "lump" ? "charcoal-7453437_1280.jpg" : "charcoal-5184954_1280.png"}`),
+    additionalProperty: product.specifications.map((spec) => ({
+      "@type": "PropertyValue",
+      name: spec.label,
+      value: spec.value,
+    })),
+    offers: {
+      "@type": "Offer",
+      priceCurrency: "USD",
+      availability: "https://schema.org/InStock",
+      url: `${siteUrl}/contact`,
+      priceSpecification: {
+        "@type": "PriceSpecification",
+        priceCurrency: "USD",
+        description: product.price,
+      },
+    },
+  }));
+
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: productFaqs.map((faq) => ({
+      "@type": "Question",
+      name: faq.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: faq.answer,
+      },
+    })),
+  };
+
   return (
     <main className="flex-1">
+      <JsonLd data={[...productJsonLd, faqJsonLd]} />
       <section className="relative overflow-hidden pt-32 pb-16">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <div className="text-center">
@@ -164,6 +235,22 @@ export default function ProductsPage() {
           >
             Contact Us
           </a>
+        </div>
+      </section>
+
+      <section className="py-16">
+        <div className="mx-auto max-w-4xl px-4 sm:px-6">
+          <h2 className="mb-8 text-center font-nacelle text-3xl font-semibold text-gray-200">
+            Product Sourcing FAQ
+          </h2>
+          <div className="space-y-6">
+            {productFaqs.map((faq) => (
+              <div key={faq.question} className="border-b border-gray-800 pb-6">
+                <h3 className="mb-2 text-lg font-semibold text-white">{faq.question}</h3>
+                <p className="text-orange-200/65">{faq.answer}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
     </main>

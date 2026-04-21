@@ -1,6 +1,9 @@
 export const metadata = {
   title: "Contact Us | Get a Bulk BBQ Charcoal Export Quote",
   description: "Contact BBQ Charcoal Export for briquettes, lump charcoal, and binchotan quotes. Email: expo@arterki.com | WhatsApp: +86 186 5882 0622.",
+  alternates: {
+    canonical: "/contact",
+  },
 };
 
 import ContactForm from "@/components/contact-form";

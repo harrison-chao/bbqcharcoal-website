@@ -48,6 +48,11 @@ export default function Footer() {
                 </a>
               </li>
               <li>
+                <a className="text-orange-200/65 transition hover:text-orange-500" href="/factory-inspection">
+                  Factory Inspection
+                </a>
+              </li>
+              <li>
                 <a className="text-orange-200/65 transition hover:text-orange-500" href="/contact">
                   Contact
                 </a>
