@@ -128,6 +128,7 @@ export default async function LandingPage({ params }: { params: Promise<{ slug: 
                 </Link>
                 <Link
                   href="/factory-inspection"
+                  data-analytics-event="select_content"
                   className="inline-flex items-center justify-center rounded-lg border border-gray-700 bg-gray-900 px-6 py-3 font-semibold text-gray-300 transition hover:bg-gray-800"
                 >
                   {data.secondaryCTA}

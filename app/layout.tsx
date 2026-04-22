@@ -1,5 +1,6 @@
 import "./css/style.css";
 
+import { Analytics } from "@vercel/analytics/react";
 import localFont from "next/font/local";
 
 import AnalyticsEvents from "@/components/analytics-events";
@@ -168,6 +169,7 @@ export default function RootLayout({
           <Header />
           <AnalyticsEvents />
           {children}
+          <Analytics />
         </div>
       </body>
     </html>

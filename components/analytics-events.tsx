@@ -24,6 +24,7 @@ export default function AnalyticsEvents() {
         link_url:
           element instanceof HTMLAnchorElement ? element.href : element.dataset.analyticsUrl,
         page_path: window.location.pathname,
+        page_location: window.location.href, // Captures query params like ?ref=outbound_linkedin
       });
     }
 

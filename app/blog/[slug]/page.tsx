@@ -1882,7 +1882,19 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
               if (trimmed === '') {
                 return <br key={i} />;
               }
-              return <p key={i} className="mb-4 text-gray-300">{trimmed}</p>;
+              
+              // Basic Markdown Parsing for Links and Bold
+              const parsedContent = trimmed
+                .replace(/\*\*(.*?)\*\*/g, '<strong class="text-white font-semibold">$1</strong>')
+                .replace(/\[(.*?)\]\((.*?)\)/g, '<a href="$2" class="text-orange-500 hover:underline" data-analytics-event="select_content">$1</a>');
+
+              return (
+                <p 
+                  key={i} 
+                  className="mb-4 text-gray-300 leading-relaxed"
+                  dangerouslySetInnerHTML={{ __html: parsedContent }}
+                />
+              );
             })}
           </div>
           
@@ -1900,6 +1912,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
               </a>
               <a
                 href="/products"
+                data-analytics-event="select_content"
                 className="btn relative w-full bg-gradient-to-b from-gray-800 to-gray-800/60 bg-[length:100%_100%] bg-[bottom] text-gray-300 before:pointer-events-none before:absolute before:inset-0 before:rounded-[inherit] before:border before:border-transparent before:[background:linear-gradient(to_right,theme(colors.gray.800),theme(colors.gray.700),theme(colors.gray.800))_border-box] before:[mask-composite:exclude_!important] before:[mask:linear-gradient(white_0_0)_padding-box,_linear-gradient(white_0_0)] hover:bg-[length:100%_150%] sm:w-auto"
               >
                 View Products
