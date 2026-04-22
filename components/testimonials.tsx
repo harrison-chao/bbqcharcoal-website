@@ -27,14 +27,14 @@ export default function Testimonials() {
       <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 md:py-20">
         <div className="mb-12 text-center md:mb-16">
           <div className="inline-flex items-center gap-3 pb-3 before:h-px before:w-8 before:bg-gradient-to-r before:from-transparent before:to-orange-200/50 after:h-px after:w-8 after:bg-gradient-to-l after:from-transparent after:to-orange-200/50">
-            <span className="inline-flex bg-gradient-to-r from-orange-500 to-orange-200 bg-clip-text text-transparent">
-              Testimonials
-            </span>
-          </div>
-          <h2 className="animate-[gradient_6s_linear_infinite] bg-[linear-gradient(to_right,theme(colors.gray.200),theme(colors.orange.200),theme(colors.gray.50),theme(colors.orange.300),theme(colors.gray.200))] bg-[length:200%_auto] bg-clip-text pb-4 font-nacelle text-3xl font-semibold text-transparent md:text-4xl">
+              <span className="inline-flex text-orange-300">
+              Export Readiness
+              </span>
+            </div>
+          <h2 className="pb-4 font-nacelle text-3xl font-semibold text-white md:text-4xl">
             Visual proof beats generic claims
           </h2>
-          <p className="mx-auto max-w-2xl text-lg text-orange-200/65">
+          <p className="mx-auto max-w-2xl text-lg text-gray-300">
             The site now emphasizes the evidence B2B buyers expect during sourcing: packing, loading, and fit-for-market product selection.
           </p>
         </div>
@@ -42,7 +42,7 @@ export default function Testimonials() {
           {proofPoints.map((item) => (
             <article
               key={item.title}
-              className="relative overflow-hidden rounded-lg border border-gray-800 bg-gray-900/50"
+              className="relative overflow-hidden rounded-lg border border-gray-800 bg-gray-900/50 transition hover:border-orange-400/40"
             >
               <Image
                 src={item.img}
@@ -54,7 +54,7 @@ export default function Testimonials() {
               />
               <div className="p-6">
                 <h3 className="mb-2 font-nacelle text-xl font-semibold text-gray-100">{item.title}</h3>
-                <p className="leading-7 text-orange-200/65">{item.content}</p>
+                <p className="leading-7 text-gray-400">{item.content}</p>
               </div>
             </article>
           ))}

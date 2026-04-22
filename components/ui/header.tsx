@@ -43,7 +43,7 @@ export default function Header() {
                 data-analytics-event="select_content"
                 data-analytics-category="cta"
                 data-analytics-label="Header get quote"
-                className="btn-sm bg-gradient-to-t from-orange-600 to-orange-500 bg-[length:100%_100%] bg-[bottom] py-[5px] text-white shadow-[inset_0px_1px_0px_0px_theme(colors.white/.16)] hover:bg-[length:100%_150%]"
+                className="btn-sm bg-orange-600 py-[5px] text-white shadow-[inset_0px_1px_0px_0px_theme(colors.white/.16)] transition hover:bg-orange-500"
               >
                 Get Quote
               </Link>

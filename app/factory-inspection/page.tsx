@@ -164,7 +164,7 @@ export default function FactoryInspectionPage() {
               <div className="mt-8 flex flex-col gap-4 sm:flex-row">
                 <Link
                   href="/contact"
-                  className="btn bg-gradient-to-t from-orange-600 to-orange-500 bg-[length:100%_100%] bg-[bottom] text-white shadow-[inset_0px_1px_0px_0px_theme(colors.white/.16)] hover:bg-[length:100%_150%]"
+                  className="btn bg-orange-600 text-white shadow-[inset_0px_1px_0px_0px_theme(colors.white/.16)] transition hover:bg-orange-500"
                   data-analytics-event="select_content"
                   data-analytics-category="factory_inspection"
                   data-analytics-label="Request inspection details"
@@ -253,7 +253,7 @@ export default function FactoryInspectionPage() {
           </p>
           <Link
             href="/contact"
-            className="btn bg-gradient-to-t from-orange-600 to-orange-500 bg-[length:100%_100%] bg-[bottom] text-white shadow-[inset_0px_1px_0px_0px_theme(colors.white/.16)] hover:bg-[length:100%_150%]"
+            className="btn bg-orange-600 text-white shadow-[inset_0px_1px_0px_0px_theme(colors.white/.16)] transition hover:bg-orange-500"
             data-analytics-event="select_content"
             data-analytics-category="factory_inspection"
             data-analytics-label="Start supplier evaluation"

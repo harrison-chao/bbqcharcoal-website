@@ -136,7 +136,7 @@ export default function BlogPage() {
       <section className="relative overflow-hidden pt-32 pb-16">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <div className="text-center">
-            <h1 className="animate-[gradient_6s_linear_infinite] bg-[linear-gradient(to_right,theme(colors.gray.200),theme(colors.orange.200),theme(colors.gray.50),theme(colors.orange.300),theme(colors.gray.200))] bg-[length:200%_auto] bg-clip-text pb-4 font-nacelle text-4xl font-semibold text-transparent md:text-5xl">
+            <h1 className="pb-4 font-nacelle text-4xl font-semibold text-white md:text-5xl">
               BBQ Charcoal Blog
             </h1>
             <p className="mx-auto max-w-2xl text-lg text-orange-200/65">

@@ -15,7 +15,7 @@ export default function AboutPage() {
       <section className="relative overflow-hidden pt-32 pb-16">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <div className="text-center">
-            <h1 className="animate-[gradient_6s_linear_infinite] bg-[linear-gradient(to_right,theme(colors.gray.200),theme(colors.orange.200),theme(colors.gray.50),theme(colors.orange.300),theme(colors.gray.200))] bg-[length:200%_auto] bg-clip-text pb-4 font-nacelle text-4xl font-semibold text-transparent md:text-5xl">
+            <h1 className="pb-4 font-nacelle text-4xl font-semibold text-white md:text-5xl">
               About Us
             </h1>
             <p className="mx-auto max-w-2xl text-lg text-orange-200/65">
@@ -202,7 +202,7 @@ export default function AboutPage() {
           <div className="flex flex-col gap-4 sm:flex-row sm:justify-center">
             <a
               href="/contact"
-              className="btn bg-gradient-to-t from-orange-600 to-orange-500 bg-[length:100%_100%] bg-[bottom] text-white shadow-[inset_0px_1px_0px_0px_theme(colors.white/.16)] hover:bg-[length:100%_150%]"
+              className="btn bg-orange-600 text-white shadow-[inset_0px_1px_0px_0px_theme(colors.white/.16)] transition hover:bg-orange-500"
             >
               Schedule a Visit
             </a>

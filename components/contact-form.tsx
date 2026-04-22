@@ -173,7 +173,7 @@ export default function ContactForm() {
       <button
         type="submit"
         disabled={state.status === "loading"}
-        className="w-full rounded-lg bg-gradient-to-t from-orange-600 to-orange-500 py-3 font-semibold text-white shadow-[inset_0px_1px_0px_0px_theme(colors.white/.16)] hover:bg-[length:100%_150%] disabled:cursor-not-allowed disabled:opacity-70"
+        className="w-full rounded-lg bg-orange-600 py-3 font-semibold text-white shadow-[inset_0px_1px_0px_0px_theme(colors.white/.16)] transition hover:bg-orange-500 disabled:cursor-not-allowed disabled:opacity-70"
       >
         {state.status === "loading" ? "Sending..." : "Submit Inquiry"}
       </button>
