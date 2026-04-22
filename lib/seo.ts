@@ -24,6 +24,12 @@ export const inspectionFacts = [
 ];
 
 export const blogSlugs = [
+  "private-label-bbq-charcoal-guide",
+  "middle-east-charcoal-import-guide",
+  "shipping-charcoal-safety-sp925",
+  "briquettes-vs-lump-charcoal-restaurant-guide",
+  "b2b-bbq-charcoal-specs-checklist",
+  "evaluating-bbq-charcoal-manufacturers-factory-inspection",
   "how-to-choose-right-bbq-charcoal-restaurant",
   "bbq-briquettes-vs-lump-charcoal-comparison",
   "understanding-charcoal-specifications",

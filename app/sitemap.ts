@@ -20,5 +20,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }));
 
-  return [...staticRoutes, ...blogRoutes];
+  const lpRoutes: MetadataRoute.Sitemap = [
+    "bulk-bbq-briquettes",
+    "middle-east-charcoal-export",
+    "private-label-bbq-charcoal",
+  ].map((slug) => ({
+    url: `${siteUrl}/lp/${slug}`,
+    lastModified,
+    changeFrequency: "monthly",
+    priority: 0.8,
+  }));
+
+  return [...staticRoutes, ...blogRoutes, ...lpRoutes];
 }
