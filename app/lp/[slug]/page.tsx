@@ -76,8 +76,15 @@ const lpData: Record<string, {
   }
 };
 
-export default function LandingPage({ params }: { params: { slug: string } }) {
-  const data = lpData[params.slug];
+export async function generateStaticParams() {
+  return Object.keys(lpData).map((slug) => ({
+    slug: slug,
+  }));
+}
+
+export default async function LandingPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const data = lpData[slug];
 
   if (!data) {
     notFound();
