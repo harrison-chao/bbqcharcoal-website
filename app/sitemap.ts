@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 import { blogSlugs, siteUrl } from "@/lib/seo";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const lastModified = new Date("2026-04-21");
+  const lastModified = new Date("2026-04-23");
 
   const staticRoutes: MetadataRoute.Sitemap = [
     { url: `${siteUrl}/`, lastModified, changeFrequency: "weekly", priority: 1 },

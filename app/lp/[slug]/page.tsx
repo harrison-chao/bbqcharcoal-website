@@ -1,3 +1,4 @@
+import { Analytics } from "@vercel/analytics/react";
 import { notFound } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
@@ -90,19 +91,37 @@ export default async function LandingPage({ params }: { params: Promise<{ slug: 
     notFound();
   }
 
-  const lpJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    name: data.title,
-    description: data.subheadline,
-    publisher: {
-      "@type": "Organization",
-      name: siteName,
+  const lpJsonLd: any[] = [
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      name: data.title,
+      description: data.subheadline,
+      publisher: {
+        "@type": "Organization",
+        name: siteName,
+      },
     },
-  };
+  ];
+
+  if (data.faqs && data.faqs.length > 0) {
+    lpJsonLd.push({
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: data.faqs.map((faq) => ({
+        "@type": "Question",
+        name: faq.question,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: faq.answer,
+        },
+      })),
+    });
+  }
 
   return (
     <main className="flex-1 bg-gray-950 text-gray-200">
+      <Analytics />
       <JsonLd data={lpJsonLd} />
       
       {/* Hero Section */}

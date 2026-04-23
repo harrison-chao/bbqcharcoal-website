@@ -16,6 +16,7 @@ const blogPostsData: Record<string, {
   readTime: string;
   image: any;
   content: string;
+  faqs?: Array<{ question: string; answer: string }>;
 }> = {
   "private-label-bbq-charcoal-guide": {
     title: "The Ultimate Guide to Private Label BBQ Charcoal: How to Launch Your Brand with a Malaysia OEM Partner",
@@ -114,7 +115,21 @@ A: For first-time orders, the timeline is usually 6-8 weeks. This allows for pac
 **[Discuss Your Private Label Project with Our OEM Team](/contact)**
 **[Request a Sample for Your Retail Brand Evaluation](/contact)**
 **[How to Evaluate a Supplier Checklist](/blog/evaluating-bbq-charcoal-manufacturers-factory-inspection)**
-`
+`,
+    faqs: [
+      {
+        question: "What is the lead time for a new private label brand launch?",
+        answer: "Typically 6-8 weeks for the first order, which includes packaging plate-making and design approval. Repeat orders are fulfilled within 3-4 weeks."
+      },
+      {
+        question: "Can you handle the logistics to Jebel Ali or Jeddah?",
+        answer: "Yes. We have deep experience in Middle East shipping. All cargo is declared non-hazardous under SP925, saving you up to $1,000 per container in DG surcharges."
+      },
+      {
+        question: "Is there an MOQ for custom-printed bags?",
+        answer: "MOQs start at one Full Container Load (FCL) to ensure printing and production efficiency."
+      }
+    ]
   },
   "middle-east-charcoal-import-guide": {
     title: "Importing BBQ Charcoal from Malaysia to UAE & Saudi Arabia: The B2B Buyer’s Guide",
@@ -212,7 +227,17 @@ A: The standard MOQ is one 20ft container (approx. 12-14 MT) or one 40ft High Cu
 
 **[Request a Middle East Export Quotation & Spec Sheet](/contact)**
 **[Download Our Factory Inspection Summary](/factory-inspection)**
-`
+`,
+    faqs: [
+      {
+        question: "How is the quality consistency maintained across multiple containers?",
+        answer: "We implement a strict Quality Management System (QMS) that includes daily moisture testing, weight/density checks, and documented production logs. Additionally, we conduct third-party SGS testing several times per year to verify technical specifications."
+      },
+      {
+        question: "What is the Minimum Order Quantity (MOQ) for Middle East export?",
+        answer: "The standard MOQ is one 20ft container (approx. 12-14 MT) or one 40ft High Cube container (approx. 24-26 MT), as this is the most cost-effective way to manage international logistics."
+      }
+    ]
   },
   "shipping-charcoal-safety-sp925": {
     title: "Shipping BBQ Charcoal Safely: A Buyer’s Guide to IMDG Code SP925 & Non-Hazardous Compliance",
@@ -307,7 +332,21 @@ A: Major transshipment hubs like Jebel Ali (UAE), Singapore, and large ports in 
 **[Request a Logistics Safety & Document Sample](/contact)**
 **[Consult Our Logistics Team on Your Next Shipment](/contact)**
 **[View Our Factory Inspection Evidence](/factory-inspection)**
-`
+`,
+    faqs: [
+      {
+        question: "Is all BBQ charcoal considered hazardous cargo?",
+        answer: "No. While charcoal is traditionally classified as Class 4.2, it can be exempted and shipped as non-hazardous if it complies with IMDG Code Special Provision 925 (SP925). This requires proper manufacturing, a 14-day weathering period, and correct documentation."
+      },
+      {
+        question: "What happens if my charcoal is shipped without a Weathering Certificate?",
+        answer: "If the shipping line discovers the cargo is charcoal without the proper non-hazardous declaration, they may reject the booking, hold the container at the port, or apply massive \"hazardous cargo\" fines and surcharges. In some cases, the cargo may even be destroyed at the shipper's expense."
+      },
+      {
+        question: "How long does the weathering process take before shipping?",
+        answer: "We follow a strict minimum 14-day weathering period. This allows the charcoal to reach a stable state and ensures it will not self-heat during transport."
+      }
+    ]
   },
   "briquettes-vs-lump-charcoal-restaurant-guide": {
     title: "Briquettes vs. Lump Charcoal: The Commercial Buyer’s Guide to Choosing the Right Restaurant Fuel",
@@ -405,7 +444,21 @@ A: Yes. We use high-quality wood sources and natural binders to ensure a clean, 
 **[Get a Restaurant Group Supply Quote](/contact)**
 **[Request a Technical Comparison Sheet (Briquette vs. Lump)](/products)**
 **[Factory Quality Control Evidence](/factory-inspection)**
-`
+`,
+    faqs: [
+      {
+        question: "Which is better for a steakhouse: briquettes or lump charcoal?",
+        answer: "For steakhouses that require a consistent sear and long dinner services, briquettes are the superior choice due to their steady heat and predictability. Lump charcoal is often preferred for short, high-heat \"theatrical\" grilling, but it lacks the efficiency needed for high-volume commercial operations."
+      },
+      {
+        question: "How much fuel can a restaurant save by switching to high-density briquettes?",
+        answer: "Because high-density briquettes burn for 4-5 hours (compared to 1.5-2 hours for lump), many restaurant groups report a 20-30% reduction in the total weight of charcoal consumed per month."
+      },
+      {
+        question: "What is the typical MOQ for a restaurant group ordering from Malaysia?",
+        answer: "We typically fulfill orders starting at one 20ft container (approx. 12-14 MT). For large restaurant groups, this volume can be easily distributed across multiple regional locations."
+      }
+    ]
   },
   "b2b-bbq-charcoal-specs-checklist": {
     title: "5 Technical Indicators of High-Quality Bulk BBQ Briquettes: The Buyer’s Evaluation Checklist",
@@ -523,7 +576,29 @@ A: Fixed Carbon is the solid combustible residue left after moisture and volatil
 **[Download Our BBQ Briquette Technical Spec Sheet](/products)**
 **[Factory Inspection & Quality Evidence](/factory-inspection)**
 **[Briquettes vs Lump Charcoal Guide](/blog/briquettes-vs-lump-charcoal)**
-`
+`,
+    faqs: [
+      {
+        question: "What is the ideal ash content for restaurant-grade BBQ briquettes?",
+        answer: "Professional-grade briquettes should have an ash content of less than 5%. This ensures cleaner burning, less frequent grill maintenance, and avoids ash being blown onto the food during high-heat cooking."
+      },
+      {
+        question: "Why does moisture content matter for international charcoal export?",
+        answer: "Moisture levels above 10% lead to ignition problems and increase the risk of mold or spontaneous combustion during long-duration sea freight. We maintain a strict internal standard of under 8% moisture."
+      },
+      {
+        question: "How can I verify that the quality of the sample matches the actual container?",
+        answer: "Always ask for evidence of the factory's quality management system. Look for documented daily production logs, moisture testing records, and third-party inspection reports (like Control Union) that prove the factory has the infrastructure to maintain consistency at scale."
+      },
+      {
+        question: "Does higher density always mean a longer burn time?",
+        answer: "Generally, yes. High-density briquettes, produced by industrial extruders, have less internal oxygen, which leads to a slower, more controlled combustion process. This is ideal for restaurants that need sustained heat over several hours."
+      },
+      {
+        question: "What is the difference between Fixed Carbon and Calorific Value?",
+        answer: "Fixed Carbon is the solid combustible residue left after moisture and volatile matter are removed. Calorific Value is the actual heat energy measured during burning. Both are important indicators of the charcoal's purity and efficiency."
+      }
+    ]
   },
   "evaluating-bbq-charcoal-manufacturers-factory-inspection": {
     title: "How to Evaluate a BBQ Charcoal Manufacturer: Why Third-Party Inspection Reports are the Ultimate Trust Anchor",
@@ -1809,9 +1884,26 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
       },
       inLanguage: "en",
     },
-    {
+  ];
+
+  if (post.faqs && post.faqs.length > 0) {
+    articleJsonLd.push({
       "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
+      "@type": "FAQPage",
+      mainEntity: post.faqs.map((faq) => ({
+        "@type": "Question",
+        name: faq.question,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: faq.answer,
+        },
+      })),
+    } as any);
+  }
+
+  articleJsonLd.push({
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
       itemListElement: [
         {
           "@type": "ListItem",
